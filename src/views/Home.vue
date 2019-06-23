@@ -10,6 +10,8 @@
       <strong>Sound Wizard</strong>
     </p>
 
+    <div id="scroll">vvvvvvv</div>
+
     <Card
       type="design"
       :title="this.designTitle"
@@ -63,6 +65,9 @@ export default {
 }
 #ima {
   padding: 120px 0;
+}
+#scroll {
+  padding-bottom: 120px;
 }
 h1 {
   // font-weight: 600;

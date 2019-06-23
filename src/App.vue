@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav-wide">
+    <div id="nav-wide" class="fixed-nav-bar">
       <nav>
         <div id="nav-content">
           <router-link to="/">HOME</router-link>
@@ -21,8 +21,6 @@
   </div>
 </template>
 
-
-
 <style lang="scss">
 @import "/styles/global.scss";
 @import "/styles/buttons.scss";
@@ -34,7 +32,7 @@ $margin: 75px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  // overflow: hidden;
+  overflow: hidden;
   // max-width: $max-width;
   // margin: 0 $margin;
   // color: #2c3e50;
@@ -49,6 +47,15 @@ $margin: 75px;
   flex-direction: row;
   justify-content: space-between;
   width: 75vw;
+}
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 90px;
+  background-color: #ffffff;
 }
 nav {
   display: inline-block;
@@ -88,7 +95,7 @@ nav {
       width: 30px;
       height: 30px;
       margin: auto;
-      padding-right: 5px;
+      padding-right: 7px;
     }
 
     .text {
