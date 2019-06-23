@@ -5,20 +5,37 @@ import Home from "./views/Home.vue";
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: "/",
       name: "home",
       component: Home
     },
     {
-      path: "/about",
-      name: "about",
+      path: "/design",
+      name: "Design",
+      component: () =>
+        import( /* webpackChunkName: "design" */ "./views/Design.vue")
+    },
+    {
+      path: "/development",
+      name: "Development",
+      component: () =>
+        import( /* webpackChunkName: "development" */ "./views/Development.vue")
+    },
+    {
+      path: "/web3",
+      name: "Web3",
+      component: () =>
+        import( /* webpackChunkName: "web3" */ "./views/Web3.vue")
+    },
+    {
+      path: "/music",
+      name: "Music",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
-    }
+        import( /* webpackChunkName: "music" */ "./views/Music.vue")
+    },
   ]
 });
