@@ -58,11 +58,11 @@ $margin: 75px;
   left: 0;
   z-index: 9999;
   width: 100%;
-  background-color: #ffffff;
+  // background-color: #ffffff;
   // 78A93B
   // background-color: #5c415d;
   // background: rgba(92, 65, 93, 0.97);
-  // background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(10px);
 }
 nav {
