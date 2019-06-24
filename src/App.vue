@@ -17,7 +17,7 @@
         </div>
       </nav>
     </div>
-    <router-view/>
+    <router-view id="page-content"/>
   </div>
 </template>
 
@@ -35,7 +35,11 @@ $margin: 75px;
   overflow: hidden;
   // max-width: $max-width;
   // margin: 0 $margin;
-  // color: #2c3e50;
+}
+#page-content {
+  margin: 120px 10vw;
+  text-align: center;
+  // display: inline-block;
 }
 #nav-wide {
   width: 500%;
@@ -54,8 +58,12 @@ $margin: 75px;
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 90px;
   background-color: #ffffff;
+  // 78A93B
+  // background-color: #5c415d;
+  // background: rgba(92, 65, 93, 0.97);
+  // background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
 }
 nav {
   display: inline-block;
@@ -74,7 +82,8 @@ nav {
   }
 
   a {
-    // font-weight: bold;
+    transition: all 2.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
     color: #6f6f6f;
     &.router-link-exact-active {
       color: #038194;
@@ -83,6 +92,7 @@ nav {
 
   a:hover {
     color: black;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.13);
   }
 
   .profile {
@@ -95,7 +105,7 @@ nav {
       width: 30px;
       height: 30px;
       margin: auto;
-      padding-right: 7px;
+      padding-right: 12px;
     }
 
     .text {

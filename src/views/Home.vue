@@ -1,29 +1,121 @@
 <template>
   <div class="home">
     <p id="hi">Hi, my name is</p>
-    <h1>Jeremy Stern</h1>
+    <h1 id="me">Jeremy Stern</h1>
 
     <p id="ima">
       I'm a
-      <strong>Product Designer</strong>,
-      <strong>Developer</strong>, and
-      <strong>Sound Wizard</strong>
+      <router-link to="/design">
+        <strong>Product Designer</strong>
+      </router-link>,
+      <router-link to="/development">
+        <strong>Developer</strong>
+      </router-link>, and
+      <router-link to="/music">
+        <strong>Sound Wizard</strong>
+      </router-link>
     </p>
 
     <div id="scroll">vvvvvvv</div>
 
-    <Card
-      type="design"
-      :title="this.designTitle"
-      :text="this.designText"
-      :button="this.designButton"
-    />
+    <div class="row">
+      <Card
+        type="design"
+        :title="this.designTitle"
+        :text="this.designText"
+        :button="this.designButton"
+      />
+      <span>
+        <img src="../assets/layout.svg">
+      </span>
+    </div>
 
-    <Card type="development" :title="this.devTitle" :text="this.devText" :button="this.devButton"/>
+    <div class="row">
+      <span>
+        <img src="../assets/code.svg">
+      </span>
+      <Card
+        type="development"
+        :title="this.devTitle"
+        :text="this.devText"
+        :button="this.devButton"
+      />
+    </div>
 
-    <Card type="web3" :title="this.web3Title" :text="this.web3Text" :button="this.web3Button"/>
+    <div class="row">
+      <Card type="web3" :title="this.web3Title" :text="this.web3Text" :button="this.web3Button"/>
+      <span>
+        <img src="../assets/grid.svg">
+      </span>
+    </div>
 
-    <Card type="music" :title="this.musicTitle" :text="this.musicText" :button="this.musicButton"/>
+    <div class="row">
+      <span>
+        <img src="../assets/headphones.svg">
+      </span>
+      <Card
+        type="music"
+        :title="this.musicTitle"
+        :text="this.musicText"
+        :button="this.musicButton"
+      />
+    </div>
+
+    <div class="spacer"></div>
+
+    <h4>I care about</h4>
+    <div class="care-container">
+      <span class="care">
+        <img src="../assets/users.svg">
+        <p class="text2">People</p>
+        <p>{{ people }}</p>
+      </span>
+      <span class="care">
+        <img src="../assets/lock.svg">
+        <p class="text2">Privacy</p>
+        <p>{{ privacy }}</p>
+      </span>
+      <span class="care">
+        <img src="../assets/sun.svg">
+        <p class="text2">Nature</p>
+        <p>{{ nature }}</p>
+      </span>
+    </div>
+
+    <div class="spacer"></div>
+
+    <p>When I’m not busy with any of the former, you’ll find me doing any of the following</p>
+    <div class="interests">
+      <p>
+        Skiing
+        <br>Photography
+        <br>Climbing
+      </p>
+      <p>
+        Reading
+        <br>Surfing
+        <br>Exploring
+      </p>
+      <p>
+        Hiking
+        <br>Learning
+        <br>SCUBA
+      </p>
+      <p>
+        Cooking
+        <br>Paintballing
+        <br>Barbacking
+      </p>
+    </div>
+
+    <div class="spacer"></div>
+    <h4 style="font-size: 16px;">Currently available for hire</h4>
+    <div id="hire-me">
+      <span>
+        <img src="../assets/briefcase.svg">
+      </span>
+      <p>Email me for inquires</p>
+    </div>
   </div>
 </template>
 
@@ -53,26 +145,92 @@ export default {
       musicTitle: "I live for music",
       musicText:
         "Whether it’s producing, djing, playing bass guitar, making weird noises, tinkering with hardware, mixing/mastering or even just listening... I can’t go one day without some kind of auditory stimulation.",
-      musicButton: "listen to my sounds"
+      musicButton: "listen to my sounds",
+      people:
+        "I love hearing stories, perspectives, and interests from those who are different from me",
+      privacy:
+        "We leave digital traces of ourselves everywhere, all the time. This data should not be available to onlookers",
+      nature:
+        "There’s only one earth, and it’s a pretty good one. I want to leave this planet better than I found it"
     };
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // justify-content: space-around;
+  // justify-content: space-evenly;
+  flex-basis: min-content;
+  vertical-align: middle;
+}
 #hi {
   padding-top: 180px;
+  animation: fadein 2s;
+}
+#me {
+  animation: fadein 4s;
 }
 #ima {
   padding: 120px 0;
+  animation: fadein 6s;
+  display: inline-block;
 }
 #scroll {
   padding-bottom: 120px;
+  animation: fadein 10s;
 }
-h1 {
-  // font-weight: 600;
+#hire-me {
+  width: 210px;
+  height: 150px;
+  background: #ffffff;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 60px;
+  font-size: 12px;
 }
 strong {
   font-weight: 600;
+}
+.care-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  .text2 {
+    font-weight: 500;
+  }
+}
+.care {
+  width: 240px;
+}
+.interests {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  p {
+    text-align: left;
+    color: #6f6f6f;
+  }
+}
+.spacer {
+  height: 240px;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
