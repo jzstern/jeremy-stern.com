@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Music</h1>
-    <p>Here is some information. This is the music page</p>
+    <!-- <h1>Music</h1> -->
+    <p>One of my favorite things in life</p>
   </div>
 </template>
 

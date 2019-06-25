@@ -23,12 +23,6 @@ export default new Router({
         import( /* webpackChunkName: "development" */ "./views/Development.vue")
     },
     {
-      path: "/web3",
-      name: "Web3",
-      component: () =>
-        import( /* webpackChunkName: "web3" */ "./views/Web3.vue")
-    },
-    {
       path: "/music",
       name: "Music",
       // route level code-splitting

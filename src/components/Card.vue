@@ -24,6 +24,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../styles/global.scss";
+
 $card-btn-text-color: #038194;
 $card-btn-highlight-color: #78a93b;
 $card-width: 390px;
@@ -51,6 +53,8 @@ p {
   line-height: 19px;
   flex-grow: 2;
 }
+
+// TODO ; add fade in to cards
 .card-btn {
   color: $card-btn-text-color;
   font-weight: 600;
@@ -59,8 +63,9 @@ p {
   // position: absolute;
   // bottom: 0;
   width: 100%;
-}
-.card-btn:hover {
-  color: $card-btn-highlight-color;
+
+  &:hover {
+    color: $card-btn-highlight-color;
+  }
 }
 </style>

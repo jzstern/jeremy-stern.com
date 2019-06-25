@@ -6,13 +6,13 @@
     <p id="ima">
       I'm a
       <router-link to="/design">
-        <strong>Product Designer</strong>
+        <strong class="design">Product Designer</strong>
       </router-link>,
       <router-link to="/development">
-        <strong>Developer</strong>
+        <strong class="dev">Developer</strong>
       </router-link>, and
       <router-link to="/music">
-        <strong>Sound Wizard</strong>
+        <strong class="music">Sound Wizard</strong>
       </router-link>
     </p>
 
@@ -43,22 +43,15 @@
     </div>
 
     <div class="row">
-      <Card type="web3" :title="this.web3Title" :text="this.web3Text" :button="this.web3Button"/>
-      <span>
-        <img src="../assets/grid.svg">
-      </span>
-    </div>
-
-    <div class="row">
-      <span>
-        <img src="../assets/headphones.svg">
-      </span>
       <Card
         type="music"
         :title="this.musicTitle"
         :text="this.musicText"
         :button="this.musicButton"
       />
+      <span>
+        <img src="../assets/headphones.svg">
+      </span>
     </div>
 
     <div class="spacer"></div>
@@ -107,15 +100,6 @@
         <br>Barbacking
       </p>
     </div>
-
-    <div class="spacer"></div>
-    <h4 style="font-size: 16px;">Currently available for hire</h4>
-    <div id="hire-me">
-      <span>
-        <img src="../assets/briefcase.svg">
-      </span>
-      <p>Email me for inquires</p>
-    </div>
   </div>
 </template>
 
@@ -158,6 +142,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../styles/global.scss";
 .row {
   position: relative;
   display: flex;
@@ -169,36 +154,35 @@ export default {
   vertical-align: middle;
 }
 #hi {
-  padding-top: 180px;
+  // padding-top: $sm * 3;
   animation: fadein 2s;
 }
 #me {
   animation: fadein 4s;
 }
 #ima {
-  padding: 120px 0;
+  padding: $med 0;
+  // padding: $med 0;
   animation: fadein 6s;
   display: inline-block;
 }
 #scroll {
-  padding-bottom: 120px;
+  padding-bottom: $med;
   animation: fadein 10s;
 }
-#hire-me {
-  width: 210px;
-  height: 150px;
-  background: #ffffff;
-  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 60px;
-  font-size: 12px;
+.design:hover {
+  color: $design-color;
+}
+.dev:hover {
+  color: $dev-color;
+}
+.music:hover {
+  color: $music-color;
 }
 strong {
   font-weight: 600;
+  color: black;
+  transition: all 0.3s ease;
 }
 .care-container {
   display: flex;
@@ -210,7 +194,7 @@ strong {
   }
 }
 .care {
-  width: 240px;
+  width: $lg;
 }
 .interests {
   display: flex;
@@ -221,9 +205,6 @@ strong {
     text-align: left;
     color: #6f6f6f;
   }
-}
-.spacer {
-  height: 240px;
 }
 @keyframes fadein {
   from {

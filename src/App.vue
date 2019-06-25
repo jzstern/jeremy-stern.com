@@ -7,7 +7,6 @@
           <div class="links">
             <router-link to="/design">design</router-link>
             <router-link to="/development">development</router-link>
-            <router-link to="/web3">web3</router-link>
             <router-link to="/music">music</router-link>
           </div>
           <div class="profile">
@@ -18,14 +17,23 @@
       </nav>
     </div>
     <router-view id="page-content"/>
+    <hire-me-button></hire-me-button>
   </div>
 </template>
 
+<script>
+import HireMeButton from "@/components/HireMeButton.vue";
+
+export default {
+  name: "App",
+  components: {
+    HireMeButton
+  }
+};
+</script>
+
 <style lang="scss">
 @import "/styles/global.scss";
-@import "/styles/buttons.scss";
-$max-width: 1152px;
-$margin: 75px;
 
 #app {
   font-family: "Avenir Next", Helvetica, Arial, sans-serif;
@@ -33,13 +41,13 @@ $margin: 75px;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   overflow: hidden;
-  // max-width: $max-width;
-  // margin: 0 $margin;
 }
 #page-content {
-  margin: 120px 10vw;
+  max-width: $max-width;
+  // margin: 0 $margin;
+  margin: $med 10vw;
+  padding-top: $sm * 3;
   text-align: center;
-  // display: inline-block;
 }
 #nav-wide {
   width: 500%;
@@ -60,19 +68,44 @@ $margin: 75px;
   width: 100%;
   // background-color: #ffffff;
   // 78A93B
-  // background-color: #5c415d;
+  // background-color: #f1f1f1;
   // background: rgba(92, 65, 93, 0.97);
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(10px);
 }
+nav a {
+  position: relative;
+  display: inline-block;
+}
+// nav a::after {
+//   content: "";
+//   background: $music-color;
+//   height: 2px;
+//   position: absolute;
+//   bottom: 0;
+//   transition: 0.16s all 0.025s;
+//   // margin-bottom: -2px !important;
+// }
+// nav a::after {
+//   left: 100%;
+//   right: 0;
+// }
+// nav a:hover ~ a::after {
+//   left: 0;
+//   right: 100%;
+// }
+// nav a:hover::after {
+//   left: 0;
+//   right: 0;
+// }
 nav {
   display: inline-block;
-  height: 90px;
-  line-height: 90px;
+  height: $navbar-height;
+  line-height: $navbar-height;
   max-width: $max-width;
 
   .links {
-    font-size: 14px;
+    font-size: 16px;
     font-variant: small-caps;
     color: #6f6f6f;
     display: flex;
@@ -82,17 +115,31 @@ nav {
   }
 
   a {
+    position: relative;
+    display: inline-block;
     transition: all 2.4s ease-out;
     -webkit-transition: all 0.4s ease-out;
     color: #6f6f6f;
     &.router-link-exact-active {
-      color: #038194;
-    }
-  }
+      border-bottom: 2px solid $dev-color;
+      color: black;
 
-  a:hover {
-    color: black;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.13);
+      // content: "";
+      // background: $dev-color;
+      // height: 2px;
+      // // position: fixed;
+      // // position: absolute;
+      // position: relative;
+      // bottom: 0;
+      // transition: 0.16s all 0.025s;
+      // margin-bottom: -2px !important;
+      // margin-top: 90px;
+    }
+
+    &:hover {
+      color: $dev-color;
+      text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.13);
+    }
   }
 
   .profile {

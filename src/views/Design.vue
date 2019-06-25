@@ -1,15 +1,21 @@
 <template>
-  <div>
-    <h1>Design</h1>
-    <p>Here is some information. This is the design page</p>
+  <div class="design">
+    <!-- <h1>Design</h1> -->
+    <p class="floater">
+      I use Figma
+      <br>Less is more
+      <br>Night mode 2020
+    </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Design"
+  name: "Design",
+  components: {}
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../styles/global.scss";
 </style>

@@ -1,17 +1,17 @@
-$main-bg-color: #919890;
+$max-width: 1152px;
+$margin: 75px;
+$design-color: #f08080;
+$dev-color: #038194;
+$music-color: #93a693;
+$primary-color: #114B5F;
+$base: 15px;
+$sm: $base * 4; // 60px
+$med: $sm * 2; // 120px
+$lg: $med * 2; // 240px
+$navbar-height: 90px;
 
 a {
     text-decoration: none;
-}
-
-// a:hover {
-//     text-decoration: underline;
-// }
-
-.app-wrapper {
-    width: 1024px;
-    height: 768px;
-    background: $main-bg-color;
 }
 
 h4 {
@@ -20,4 +20,13 @@ h4 {
 
 p {
     font-size: 18px;
+}
+
+.floater {
+    padding-bottom: $sm * 3;
+    // padding: ($sm * 3) 0;
+}
+
+.spacer {
+    height: $lg;
 }
