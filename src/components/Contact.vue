@@ -80,7 +80,7 @@ export default {
   z-index: 999999;
   // line-height: 0px !important;
   // line-height: 0 !important;
-  // line-height: 1pt !important;
+  line-height: 1pt !important;
   margin-top: -$base * 1.5;
   margin-left: -$lg;
 }
