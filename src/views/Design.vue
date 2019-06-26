@@ -1,7 +1,6 @@
 <template>
   <div class="design">
-    <!-- <h1>Design</h1> -->
-    <contact></contact>
+    <h1>Design</h1>
     <p class="floater">
       I use Figma
       <br>Less is more
@@ -11,12 +10,8 @@
 </template>
 
 <script>
-import Contact from "../components/Contact.vue";
 export default {
-  name: "Design",
-  components: {
-    Contact
-  }
+  name: "Design"
 };
 </script>
 

@@ -112,7 +112,7 @@ export default {
   components: {
     Card
   },
-  data: function() {
+  data() {
     return {
       designTitle: "I practice human-centered design",
       designText:
@@ -213,5 +213,8 @@ strong {
   to {
     opacity: 1;
   }
+}
+.home {
+  padding-top: $sm * 3;
 }
 </style>

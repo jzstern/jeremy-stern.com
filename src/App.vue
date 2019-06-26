@@ -9,9 +9,14 @@
             <router-link to="/development">development</router-link>
             <router-link to="/music">music</router-link>
           </div>
-          <div class="profile">
-            <img class="pic" src="https://i.imgur.com/L9rLNo7.png">
-            <div class="text">Jeremy Stern</div>
+          <div class="big-wrapper" @mouseover="hover = true" @mouseleave="hover = false">
+            <div class="profile">
+              <img class="pic" src="https://i.imgur.com/L9rLNo7.png">
+              <div class="text">Jeremy Stern</div>
+              <img id="chevron" src="./assets/chevron-down.svg">
+            </div>
+            <!-- <contact v-if="true"></contact> -->
+            <contact v-if="hover"></contact>
           </div>
         </div>
       </nav>
@@ -23,11 +28,21 @@
 
 <script>
 import HireMeButton from "@/components/HireMeButton.vue";
+import Contact from "@/components/Contact.vue";
 
 export default {
   name: "App",
   components: {
-    HireMeButton
+    HireMeButton,
+    Contact
+  },
+  data() {
+    return {
+      hover: false
+    };
+  },
+  methods: {
+    isHovering() {}
   }
 };
 </script>
@@ -35,24 +50,30 @@ export default {
 <style lang="scss">
 @import "/styles/global.scss";
 
+.active {
+  background: green;
+}
 #app {
   font-family: "Avenir Next", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  overflow: hidden;
+  // z-index: 0;
+  // overflow: hidden;
+  // overflow: visible !important;
 }
 #page-content {
   max-width: $max-width;
   // margin: 0 $margin;
   margin: $med 10vw;
-  padding-top: $sm * 3;
   text-align: center;
+  z-index: 1;
 }
 #nav-wide {
   width: 500%;
   margin-left: -200%;
   border-bottom: 2px solid rgba(196, 196, 196, 0.25);
+  // overflow: visible !important;
 }
 #nav-content {
   display: flex;
@@ -64,7 +85,6 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
   width: 100%;
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(10px);
@@ -155,6 +175,11 @@ nav {
       text-transform: capitalize;
       font-weight: normal;
       font-size: 14px;
+    }
+
+    #chevron {
+      margin-left: 8px;
+      margin-top: 2px;
     }
 
     &:hover {

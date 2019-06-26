@@ -1,7 +1,7 @@
 <template>
   <div id="music">
     <!-- <h1>Music</h1> -->
-    <p>One of my favorite things in life</p>
+    <!-- <p>One of my favorite things in life</p> -->
     <div class="content">
       <h2>Production</h2>
       <p>I've been teaching myself to produce with Ableton Live for the past ~5 years. Happy to license demos &/or create music of any/all genres for whatever you might need ^_^</p>
@@ -22,7 +22,7 @@
       <br>
 
       <h2>DJing</h2>
-      <p>I've spun a mighty few events, both formal and informal, and would love to bring you on a sonic journey! I can cater to most genres and will even record a mix for you.</p>
+      <p>I've spun a mighty few events, both formal and informal, and would love to bring you on a sonic journey! I can cater to most genres and will happily record a mix for you.</p>
 
       <div class="soundcloud-links">
         <iframe

@@ -1,7 +1,7 @@
 <template>
   <div id="dev">
     <!-- <h1>Development</h1> -->
-    <p class="floater">The more I learn, the more I realize I don't know</p>
+    <!-- <p class="floater">The more I learn, the more I realize I don't know</p> -->
     <div class="content">
       <h2>Frameworks & Languages</h2>
       <div class="frameworks">
@@ -13,7 +13,10 @@
       <br>
       <h2>Loft Radio</h2>
       <p>I'm currently chugging away on a project called Loft; a 24/7 music stream that enables listeners to tip artists in small amounts of cryptocurrency. Experimenting with new ways of fostering community engagement, exchanging value between artists and listeners, and playful interactions.</p>
-      <p>See this Twitter thread for more info and don't hesitate to reach out if you're curious!</p>
+      <p>
+        See
+        <a href>this Twitter thread</a> for more info and don't hesitate to reach out if you're curious!
+      </p>
       <br>
       <br>
       <h2>Web 3 & Cryptocurrency</h2>
@@ -39,7 +42,7 @@ export default {
   components: {
     Framework
   },
-  data: function() {
+  data() {
     return {
       frameworks: [
         "React",
