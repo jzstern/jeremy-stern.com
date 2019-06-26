@@ -66,16 +66,8 @@ export default {
   left: 0;
   z-index: 9999;
   width: 100%;
-  // background-color: #ffffff;
-  // 78A93B
-  // background-color: #f1f1f1;
-  // background: rgba(92, 65, 93, 0.97);
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(10px);
-}
-nav a {
-  position: relative;
-  display: inline-block;
 }
 // nav a::after {
 //   content: "";
@@ -107,7 +99,7 @@ nav {
   .links {
     font-size: 16px;
     font-variant: small-caps;
-    color: #6f6f6f;
+    color: $gray;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -115,11 +107,10 @@ nav {
   }
 
   a {
+    @extend %quick-ease;
     position: relative;
     display: inline-block;
-    transition: all 2.4s ease-out;
-    -webkit-transition: all 0.4s ease-out;
-    color: #6f6f6f;
+    color: $gray;
     &.router-link-exact-active {
       border-bottom: 2px solid $dev-color;
       color: black;
@@ -143,6 +134,7 @@ nav {
   }
 
   .profile {
+    @extend %quick-ease;
     display: flex;
     flex-direction: row;
 
@@ -153,12 +145,21 @@ nav {
       height: 30px;
       margin: auto;
       padding-right: 12px;
+
+      &:hover {
+        // TODO ; add box shadow
+      }
     }
 
     .text {
       text-transform: capitalize;
       font-weight: normal;
       font-size: 14px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $gray;
     }
   }
 }

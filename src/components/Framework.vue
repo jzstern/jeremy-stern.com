@@ -1,6 +1,5 @@
 <template>
   <div class="bubble">{{ title }}</div>
-  
 </template>
 
 <script>
@@ -14,19 +13,18 @@ export default {
 <style lang="scss" scoped>
 @import "../styles/global.scss";
 .bubble {
+  @extend %quick-ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: #6f6f6f;
-  border: 1px solid #6f6f6f;
+  color: $gray;
+  border: 1px solid $gray;
   box-sizing: border-box;
   border-radius: 15px;
   width: 105px;
   height: 30px;
   margin-bottom: $base;
-  transition: all 2.4s ease-out;
-  -webkit-transition: all 0.4s ease-out;
 
   &:hover {
     cursor: pointer;

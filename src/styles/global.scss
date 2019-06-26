@@ -4,6 +4,7 @@ $design-color: #f08080;
 $dev-color: #038194;
 $music-color: #93a693;
 $primary-color: #114B5F;
+$gray: #6f6f6f;
 $base: 15px;
 $sm: $base * 4; // 60px
 $med: $sm * 2; // 120px
@@ -29,4 +30,9 @@ p {
 
 .spacer {
     height: $lg;
+}
+
+%quick-ease {
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
 }

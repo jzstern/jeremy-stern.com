@@ -182,7 +182,7 @@ export default {
 strong {
   font-weight: 600;
   color: black;
-  transition: all 0.3s ease;
+  @extend %quick-ease;
 }
 .care-container {
   display: flex;
