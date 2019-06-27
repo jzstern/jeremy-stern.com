@@ -41,7 +41,7 @@ export default {
         {
           title: "Lightning Network App Store",
           text:
-            "I was given a loose list of requirements to make a directory for applications that use the Bitcoin Lightning Network. After asking questions and reshaping the requirements to support the main value propositions, I spent the day moving from low fidelity wireframes to the prototype shown below.",
+            "I was given a loose list of requirements to make a catalog for applications that use the Bitcoin Lightning Network. After asking questions and reshaping the requirements to support the main value propositions, I spent the day moving from low fidelity wireframes to the prototype shown below.",
           slides: [
             '<img width="600px" src="https://i.imgur.com/Q3l9rKQ.png">',
             '<img width="600px" src="https://i.imgur.com/PgqWvQk.png">',
