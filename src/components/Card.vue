@@ -57,6 +57,7 @@ p {
 
 // TODO ; add fade in to cards
 .card-btn {
+  @extend %quick-ease;
   color: $card-btn-text-color;
   font-weight: 600;
   font-size: 18px;
@@ -66,7 +67,8 @@ p {
   width: 100%;
 
   &:hover {
-    color: $card-btn-highlight-color;
+    // color: $card-btn-highlight-color;
+    color: $design-color;
   }
 }
 </style>

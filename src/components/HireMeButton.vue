@@ -59,9 +59,9 @@ h4 {
   -o-transition: all 0.3s ease-in-out;
 }
 .box-shadow-below {
-  -webkit-box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 8px 12px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 8px 12px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 8px 12px -6px rgba(0, 0, 0, 0.75);
 }
 .box-shadow-below-hover:hover {
   -webkit-box-shadow: 0 12px 18px -6px black;

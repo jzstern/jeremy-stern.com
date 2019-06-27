@@ -59,6 +59,7 @@
 
     <h4>I care about</h4>
     <br>
+    <br>
     <div class="care-container">
       <span class="care">
         <img src="../assets/users.svg">
@@ -79,7 +80,7 @@
 
     <div class="spacer"></div>
 
-    <p>When I’m not busy with any of the former, you’ll find me doing any of the following</p>
+    <p>When I’m not busy with any of the former, you’ll find me enjoying any of the following</p>
     <div class="interests">
       <p>
         Skiing
@@ -94,12 +95,12 @@
       <p>
         Hiking
         <br>Learning
-        <br>SCUBA
+        <br>Foosball
       </p>
       <p>
         Cooking
-        <br>Paintballing
-        <br>Foosball
+        <br>Paintball
+        <br>SCUBA
       </p>
     </div>
   </div>
@@ -118,11 +119,11 @@ export default {
     return {
       designTitle: "I practice human-centered design",
       designText:
-        "Why shouldn’t every website be grandma friendly? I get users from point A to Z without any friction. No ambiguities. No bloatware. Clean & simple.",
+        "Why shouldn’t every website be grandma friendly? I get users from point A to Z without any friction. No ambiguities. No bloatware. No intrusion. Clean & simple.",
       designButton: "check out my work",
       devTitle: "I'm an agile developer",
       devText:
-        "I make stuff... and break stuff! I’ve studied everything from Object-Oriented Design to Artificial Intelligence. I’m familiar with a handful of frameworks and I’m always looking for new ways to do things.",
+        "I make stuff... and break stuff! I’ve studied everything from Object-Oriented Design to Artificial Intelligence. I’m familiar with a handful of frameworks and I’m always looking for new ways of doing things.",
       devButton: "see what i'm building",
       web3Title: "I'm passionate about decentralization",
       web3Text:
@@ -146,14 +147,14 @@ export default {
 <style lang="scss" scoped>
 @import "../styles/global.scss";
 .row {
-  position: relative;
+  // position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  // justify-content: space-around;
-  // justify-content: space-evenly;
   flex-basis: min-content;
-  vertical-align: middle;
+
+  span {
+    margin: auto;
+  }
 }
 #hi {
   // padding-top: $sm * 3;
