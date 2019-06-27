@@ -77,4 +77,13 @@ iframe {
   height: 480px;
   margin-bottom: $med;
 }
+
+a {
+  @extend %quick-ease;
+  color: $dev-color;
+
+  &:hover {
+    color: $design-color;
+  }
+}
 </style>

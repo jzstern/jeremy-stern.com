@@ -35,7 +35,8 @@ h4 {
 #hire-me {
   width: 270px;
   height: 210px;
-  background: $music-color;
+  // background: $music-color;
+  background: #75bac4;
   border-radius: 12px;
   display: flex;
   flex-direction: column;

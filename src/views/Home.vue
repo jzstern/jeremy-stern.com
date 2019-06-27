@@ -16,7 +16,8 @@
       </router-link>
     </p>
 
-    <div id="scroll">vvvvvvv</div>
+    <br>
+    <img id="scroll" src="http://albara.org/images/6576638-0-scrolldown-black.gif?crc=4181211743">
 
     <div class="row">
       <Card
@@ -57,6 +58,7 @@
     <div class="spacer"></div>
 
     <h4>I care about</h4>
+    <br>
     <div class="care-container">
       <span class="care">
         <img src="../assets/users.svg">
@@ -87,7 +89,7 @@
       <p>
         Reading
         <br>Surfing
-        <br>Exploring
+        <br>Chess
       </p>
       <p>
         Hiking
@@ -97,7 +99,7 @@
       <p>
         Cooking
         <br>Paintballing
-        <br>Barbacking
+        <br>Foosball
       </p>
     </div>
   </div>
@@ -158,12 +160,16 @@ export default {
   animation: fadein 2s;
 }
 #me {
-  animation: fadein 4s;
+  // transition: [property] [duration] [timing-function] [delay];
+  animation-delay: 2s;
+  animation: fadein 3s;
 }
 #ima {
-  padding: $med 0;
+  padding-top: $med;
+  margin-bottom: $sm;
   // padding: $med 0;
-  animation: fadein 6s;
+  animation-delay: 4s;
+  animation: fadein 3s;
   display: inline-block;
 }
 #scroll {
@@ -206,15 +212,41 @@ strong {
     color: #6f6f6f;
   }
 }
-@keyframes fadein {
-  from {
+// @keyframes fadein {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+.home {
+  // transition: [property] [duration] [timing-function] [delay];
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  padding-top: $sm * 3;
+}
+#scroll {
+  width: $sm;
+  display: inline-block;
+  // animation: fadein 2s;
+  // animation-delay: 6s;
+  // animation-fill-mode: forwards;
+  // visibility: hidden;
+
+  transition: all 0.4s ease 6s;
+  -webkit-transition: all 0.4s ease 6s;
+  -moz-transition: all 0.4s ease 6s;
+}
+
+@keyframes fadeIn {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
+    visibility: visible;
     opacity: 1;
   }
-}
-.home {
-  padding-top: $sm * 3;
 }
 </style>

@@ -36,6 +36,7 @@ $card-padding: 30px;
   border: 1px black;
   width: $card-width - $card-padding;
   height: $card-height - $card-padding;
+  // background-color: lightgray;
   // max-width: $card-width;
   // max-height: $card-height;
   box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
