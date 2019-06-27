@@ -96,8 +96,6 @@ export default {
   box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.3);
   width: 330px;
   height: 210px;
-  // z-index: 999999;
-  // overflow: visible !important;
 
   //   &:hover {
   //     cursor: pointer;

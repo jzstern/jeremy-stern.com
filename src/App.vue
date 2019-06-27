@@ -73,6 +73,7 @@ export default {
   width: 500%;
   margin-left: -200%;
   border-bottom: 2px solid rgba(196, 196, 196, 0.25);
+  z-index: 100;
   // overflow: visible !important;
 }
 #nav-content {
