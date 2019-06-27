@@ -3,20 +3,21 @@
     <h3>{{ title }}</h3>
     <p>{{ text }}</p>
     <br>
-    <a :href="url" target="_blank">
-      <img :src="previewUrl">
-    </a>
+    <carousel class="pics" :data="slides" indicators="hover" autoplay="false" interval="8000"></carousel>
   </div>
 </template>
 
 <script>
+import VueCarousel from "@chenfengyuan/vue-carousel";
 export default {
   name: "DesignPreview",
+  components: {
+    VueCarousel
+  },
   props: {
     title: String,
     text: String,
-    previewUrl: String,
-    url: String
+    slides: Array
   }
 };
 </script>
@@ -27,8 +28,6 @@ $preview-width: $lg * 4;
 $preview-height: $lg * 2;
 
 .design-preview {
-  //   margin: $sm 0;
-  //   text-align: left;
   text-align: center;
   p {
     font-size: 16px;
@@ -38,24 +37,12 @@ $preview-height: $lg * 2;
   h3 {
     text-align: left;
   }
+}
 
-  a {
-    @extend %quick-ease;
-    display: inline-block;
-    margin-bottom: $sm;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-
-    img {
-      max-width: 100%;
-      vertical-align: top;
-
-      //   @if (this.title != "Rocky Road") {
-      //   }
-    }
-
-    &:hover {
-      box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
-    }
-  }
+.pics {
+  //   border: 1px solid $gray;
+  margin-bottom: $sm;
+  line-height: 0px;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
 }
 </style>

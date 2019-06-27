@@ -7,42 +7,33 @@
       <!-- <i>I primarily use Figma, but have experience with Sketch</i> -->
       <!-- <p>Below are a handful of projects I've worked on for hackathons, design challenges, and just for fun. Hit me up if you'd like to learn a bit more about my process!</p> -->
 
-      <carousel :data="slides"></carousel>
       <div id="images">
         <design-preview
           v-for="item in previews"
           :key="item.title"
           :title="item.title"
           :text="item.text"
-          :url="item.url"
-          :previewUrl="item.previewUrl"
+          :slides="item.slides"
         ></design-preview>
-
-        <!-- <a href="https://imgur.com/gallery/IuOT5D1" target="_blank">
-        <img src="https://i.imgur.com/8Xy54Qa.png">
-      </a>
-      <a href="https://imgur.com/gallery/lltFBLZ" target="_blank">
-        <img src="https://i.imgur.com/Gq6Up5G.png">
-        </a>-->
       </div>
-      <h2>Philosophy</h2>
-      <i>“People ignore design that ignores people.” - Frank Chimero</i>
-      <!-- <p>- Frank Chimero</p> -->
-      <p>Design is one of the most important yet overlooked foundations of digital products. No matter how much high level utility a service provides, user experience will make or break a product.</p>
+      <br>
+      <!-- <h2>Philosophy</h2> -->
+      <!-- <i>“People ignore design that ignores people.” - Frank Chimero</i> -->
+      <i style="font-size: 20px">“People ignore design that ignores people”</i>
+      <p style="font-size: 18px">- Frank Chimero</p>
+      <!-- <p>Design is one of the most important yet overlooked foundations of digital products. No matter how much high level utility a service provides, user experience will make or break a product.</p>
       <p>Together, we can bring ideas to their full potential. Everything starts with defining the problem. It's not just the how, but also the why.</p>
-      <p>Less is more.</p>
+      <p>Less is more.</p>-->
     </div>
   </div>
 </template>
 
 <script>
 import DesignPreview from "../components/DesignPreview.vue";
-import VueCarousel from "@chenfengyuan/vue-carousel";
 export default {
   name: "Design",
   components: {
-    DesignPreview,
-    VueCarousel
+    DesignPreview
   },
   data() {
     return {
@@ -50,53 +41,43 @@ export default {
         {
           title: "Lightning Network App Store",
           text:
-            "I was given a loose list of requirements to make a directory for applications that use the Bitcoin Lightning Network.",
-          url: "https://imgur.com/gallery/IuOT5D1",
-          previewUrl:
-            "https://cdn.dribbble.com/users/3030370/screenshots/6626797/home.png"
-          // previewUrl: "https://i.imgur.com/8Xy54Qa.png"
-        },
-        {
-          title: "Rocky Road",
-          text:
-            "Concept I made for a ski/snowboard ride share app that would connect drivers with extra space in their car to people that need a cheap lift up.",
-          url: "https://imgur.com/gallery/lltFBLZ",
-          previewUrl: "https://i.imgur.com/Gq6Up5G.png"
+            "I was given a loose list of requirements to make a directory for applications that use the Bitcoin Lightning Network. After asking questions and reshaping the requirements to support the main value propositions, I spent the day moving from low fidelity wireframes to the prototype shown below.",
+          slides: [
+            '<img width="600px" src="https://i.imgur.com/Q3l9rKQ.png">',
+            '<img width="600px" src="https://i.imgur.com/PgqWvQk.png">',
+            '<img width="600px" src="https://i.imgur.com/0mwIZwb.png">',
+            '<img width="600px" src="https://i.imgur.com/WgSBziG.png">'
+          ]
         },
         {
           title: "Flight Fund",
           text:
-            "I snuck into ETH Denver for a day and worked with my friend's hackathon group to create their project's interface. Worked through.. ",
-          url: "https://imgur.com/a/eVDXUfz",
-          previewUrl: "https://i.imgur.com/5ERx61S.jpg"
+            "I snuck into ETH Denver for a day and collaborated with my friend's hackathon team to design their project's interface. Worked with the group to establish scope, user flows, required information & more before cranking these out just in time to be presented in the social impact category.",
+          slides: [
+            '<img width="600px" src="https://i.imgur.com/BDqeB7K.jpg">',
+            '<img width="600px" src="https://i.imgur.com/HCMAPOe.jpg">',
+            '<img width="600px" src="https://i.imgur.com/jv0jCE6.jpg">',
+            '<img width="600px" src="https://i.imgur.com/kn2TRzi.jpg">',
+            '<img width="600px" src="https://i.imgur.com/jgrXtOt.jpg">',
+            '<img width="600px" src="https://i.imgur.com/CkOOVKm.jpg">',
+            '<img width="600px" src="https://i.imgur.com/fgyYLa1.jpg">',
+            '<img width="600px" src="https://i.imgur.com/xiKlJsg.jpg">',
+            '<img width="600px" src="https://i.imgur.com/7S2eK1m.jpg">'
+          ]
+        },
+        {
+          title: "Rocky Road",
+          text:
+            "Concept I made for a ski/snowboard ride share app that would connect drivers with extra space in their car to people that need a cheap lift up. Spending a powder-filled winter in Denver without a car was a trying time for me, and I challenged myself to think of a simple alternative to the expensive and tedious commute options to the slopes.",
+          slides: [
+            '<img width="600px" src="https://i.imgur.com/j0eOX39.png">',
+            '<img width="600px" src="https://i.imgur.com/iConn4U.png">',
+            '<img width="600px" src="https://i.imgur.com/GlCTue9.png">',
+            '<img width="600px" src="https://i.imgur.com/dX56nZW.png">',
+            '<img width="600px" src="https://i.imgur.com/zWeG5Vn.png">',
+            '<img width="600px" src="https://i.imgur.com/OSDX30a.png">'
+          ]
         }
-        // {
-        //   title: "Cryptocurrency Converter",
-        //   text:
-        //     "Result of a Daily UI Challenge prompt. Minimalist approach to converting the value of FIAT currency to various popular cryptocurrencies.",
-        //   url: "https://dribbble.com/shots/5868967-Crypto-Converter",
-        //   previewUrl:
-        //     "https://cdn.dribbble.com/users/3030370/screenshots/5868967/day_4__calculator_-_view_2_.png"
-        // }
-        // {
-        //   title: "Credit Card Checkout",
-        //   text:
-        //     "Another Daily UI Challenge prompt for a generic credit card checkout for a shopping app.",
-        //   url: "https://i.imgur.com/nsSSSmu.png",
-        //   previewUrl: "https://i.imgur.com/nsSSSmu.png"
-        // },
-        // {
-        //   title: "Setting Page",
-        //   text: "Concept for a generic settings page on a mobile app.",
-        //   url: "https://dribbble.com/shots/5904993-Settings-Page/attachments",
-        //   previewUrl:
-        //     "https://cdn.dribbble.com/users/3030370/screenshots/5904993/settings.png"
-        // }
-      ],
-      slides: [
-        '<div class="example-slide">Slide 1</div>',
-        '<div class="example-slide">Slide 2</div>',
-        '<div class="example-slide">Slide 3</div>'
       ]
     };
   }
@@ -124,15 +105,5 @@ a {
 
 #images {
   text-align: center;
-}
-
-.example-slide {
-  align-items: center;
-  background-color: #666;
-  color: #999;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-  min-height: 10rem;
 }
 </style>
