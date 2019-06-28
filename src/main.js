@@ -4,7 +4,7 @@ import router from "./router";
 import VueCarousel from "@chenfengyuan/vue-carousel";
 
 Vue.use(VueCarousel);
-Vue.config.productionTip = false;
+Vue.config.productionTip = true;
 
 new Vue({
   router,
