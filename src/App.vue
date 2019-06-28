@@ -65,7 +65,9 @@ export default {
 #page-content {
   max-width: $max-width;
   // margin: 0 $margin;
-  margin: $med 10vw;
+  // margin: $med 10vw;
+  margin: auto;
+  margin-top: $med !important ;
   text-align: center;
   z-index: 1;
 }

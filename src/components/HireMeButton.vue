@@ -7,7 +7,7 @@
       onclick="location.href='mailto:jzstern@gmail.com';"
     >
       <span>
-        <!-- <img src="../assets/briefcase-white.svg"> -->
+        <!-- <img src="../assets/briefcase-white.svg"/> -->
         <img src="../assets/briefcase.svg">
       </span>
       <p>Email me for inquires</p>

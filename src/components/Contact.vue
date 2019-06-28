@@ -13,7 +13,7 @@
             :iconPath="item.iconPath"
           ></social>
           <!-- <div class="night-mode-switch">
-          <img src="../assets/moon.svg">
+          <img src="../assets/moon.svg"/>
           click me
           </div>-->
         </div>
@@ -48,6 +48,11 @@ export default {
           url: "https://www.instagram.com/jzstern/",
           iconPath: "instagram.svg"
         },
+        // {
+        //   name: "Soundcloud",
+        //   url: "https://soundcloud.com/palmingo",
+        //   iconPath: "soundcloud.svg"
+        // },
         {
           name: "Dribbble",
           url: "https://dribbble.com/jzstern",
@@ -73,7 +78,6 @@ export default {
 @import "../styles/global.scss";
 #wrapper {
   width: 100%;
-  // height: 210px;
   position: fixed;
   display: inline-block;
   text-align: right;
