@@ -67,7 +67,8 @@ export default {
   // margin: 0 $margin;
   // margin: $med 10vw;
   margin: auto;
-  margin-top: $med !important ;
+  margin-top: $med !important;
+  margin-bottom: $med !important;
   text-align: center;
   z-index: 1;
 }
