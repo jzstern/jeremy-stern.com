@@ -8,7 +8,7 @@
         <framework v-for="name in frameworks" :key="name" :title="name"></framework>
       </div>
 
-      <i>I also have experience with Node, MongoDB, AWS Amplify, web3, IPFS, React Native, jQuery, Bootstrap, Material, C++ and more (:</i>
+      <i>I also have experience with Node, MongoDB, AWS Amplify, web3, IPFS, React Native, jQuery, Bootstrap, Material, C++ and more</i>
       <br>
       <br>
       <h2>Loft Radio</h2>

@@ -15,8 +15,10 @@
               <div class="text">Jeremy Stern</div>
               <img id="chevron" src="./assets/chevron-down.svg">
             </div>
-            <!-- <contact v-if="true"></contact> -->
-            <contact v-if="hover"></contact>
+            <transition name="slide-fade">
+              <!-- <contact v-if="true"></contact> -->
+              <contact v-if="hover"></contact>
+            </transition>
           </div>
         </div>
       </nav>
@@ -49,6 +51,19 @@ export default {
 
 <style lang="scss">
 @import "/styles/global.scss";
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  // transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.5s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 
 .active {
   background: green;
