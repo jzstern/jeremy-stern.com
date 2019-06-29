@@ -13,7 +13,7 @@
             :iconPath="item.iconPath"
           ></social>
           <!-- <div class="night-mode-switch">
-          <img src="../assets/moon.svg"/>
+          <img src="../assets/moon.svg"/>>
           click me
           </div>-->
         </div>
@@ -112,12 +112,7 @@ export default {
 
 .title {
   margin-top: 0;
-  padding-top: 0;
   text-align: left;
-}
-
-.socials {
-  max-height: 210px;
 }
 
 .night-mode-switch {

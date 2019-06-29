@@ -15,7 +15,7 @@
       <p>I'm currently chugging away on a project called Loft; a 24/7 music stream that enables listeners to tip artists in small amounts of cryptocurrency. Experimenting with new ways of fostering community engagement, exchanging value between artists and listeners, and playful interactions.</p>
       <p>
         See
-        <a href>this Twitter thread</a> for more info and don't hesitate to reach out if you're curious!
+        <a href="https://twitter.com/jzstern" target="_blank">this Twitter thread</a> for more info and don't hesitate to reach out if you're curious!
       </p>
       <br>
       <br>
@@ -27,9 +27,15 @@
       <br>
       <p>
         In the meantime, feel free to check out my
-        <a href="https://github.com/jzstern/">Github</a>,
-        <a href="https://i.imgur.com/2zCvnOj.jpg">resume</a>, or even the
-        <a href="https://github.com/jzstern/jeremy-stern.com">source code</a> for this site if you're curious!
+        <a
+          href="https://github.com/jzstern/"
+          target="_blank"
+        >Github</a>,
+        <a href="https://i.imgur.com/2zCvnOj.jpg" target="_blank">resume</a>, or even the
+        <a
+          href="https://github.com/jzstern/jeremy-stern.com"
+          target="_blank"
+        >source code</a> for this site if you're curious!
       </p>
     </div>
   </div>
