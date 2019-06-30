@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-carousel": "^1.0.2",
+    "aos": "^2.3.4",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"

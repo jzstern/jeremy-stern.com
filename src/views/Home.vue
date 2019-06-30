@@ -1,9 +1,22 @@
 <template>
   <div class="home">
     <p id="hi">Hi, my name is</p>
-    <h1 id="me">Jeremy Stern</h1>
-
-    <p id="ima">
+    <h1
+      id="me"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="1200"
+      data-aos-delay="500"
+      data-aos-easing="ease"
+    >Jeremy Stern</h1>
+    <p
+      id="ima"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+      data-aos-delay="2000"
+      data-aos-easing="ease"
+    >
       I'm a
       <router-link to="/design">
         <strong class="design">Product Designer</strong>
@@ -21,8 +34,17 @@
       style="filter: invert(100%)"
       id="scroll"
       src="http://albara.org/images/6576638-0-scrolldown-black.gif?crc=4181211743"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="3000"
+      data-aos-delay="1200"
     />
-    <div class="row">
+    <div
+      class="row"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+    >
       <Card
         type="design"
         :title="this.designTitle"
@@ -34,7 +56,12 @@
       </span>
     </div>
 
-    <div class="row">
+    <div
+      class="row"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+    >
       <Card
         type="development"
         :title="this.devTitle"
@@ -46,7 +73,12 @@
       </span>
     </div>
 
-    <div class="row">
+    <div
+      class="row"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+    >
       <Card
         type="music"
         :title="this.musicTitle"
@@ -60,10 +92,20 @@
 
     <div class="spacer"></div>
 
-    <h4>I care about</h4>
+    <h4
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+    >I care about</h4>
     <br />
     <br />
-    <div class="care-container">
+    <div
+      class="care-container"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2500"
+      data-aos-delay="300"
+    >
       <CareCard
         title="People"
         text="I love hearing stories, perspectives, and interests from those who are different from me."
@@ -80,28 +122,21 @@
         iconPath="sun.svg"
       />
     </div>
-    <!-- <div class="care-container">
-      <span class="care">
-        <img src="../assets/users.svg" />
-        <p class="text2">People</p>
-        <p>{{ people }}</p>
-      </span>
-      <span class="care">
-        <img src="../assets/lock.svg" />
-        <p class="text2">Privacy</p>
-        <p>{{ privacy }}</p>
-      </span>
-      <span class="care">
-        <img src="../assets/sun.svg" />
-        <p class="text2">Nature</p>
-        <p>{{ nature }}</p>
-      </span>
-    </div>-->
 
     <div class="spacer"></div>
 
-    <p>When I’m not busy with any of the former, you’ll find me enjoying any of the following</p>
-    <div class="interests">
+    <p
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+    >When I’m not busy with any of the former, you’ll find me enjoying any of the following</p>
+    <div
+      class="interests"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+      data-aos-delay="800"
+    >
       <p>
         Skiing
         <br />Photography
@@ -136,6 +171,9 @@
 // @ is an alias to /src
 import Card from "@/components/Card.vue";
 import CareCard from "@/components/CareCard.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 // import Rellax from "../../node_modules/rellax/rellax.min.js";      // TODO ; get rellax working
 // var rellax = new Rellax(".rellax");
 
@@ -176,6 +214,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/global.scss";
+$aos-distance: $base * 2; // It has to be above import
+@import "node_modules/aos/src/sass/aos.scss";
 .row {
   // position: relative;
   display: flex;
@@ -193,27 +233,27 @@ export default {
 }
 #hi {
   // padding-top: $sm * 3;
-  animation: fadein 2s;
+  // animation: fadein 2s;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.06);
 }
 #me {
   // transition: [property] [duration] [timing-function] [delay];
-  animation-delay: 2s;
-  animation: fadein 3s;
+  // animation-delay: 2s;
+  // animation: fadein 3s;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.12);
 }
 #ima {
   padding-top: $med;
   margin-bottom: $sm;
   // padding: $med 0;
-  animation-delay: 4s;
-  animation: fadein 3s;
+  // animation-delay: 4s;
+  // animation: fadein 3s;
   display: inline-block;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08);
 }
+
 #scroll {
   padding-bottom: $med;
-  animation: fadein 10s;
 }
 .design:hover {
   // color: $design-color;
