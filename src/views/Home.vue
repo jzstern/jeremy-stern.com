@@ -37,7 +37,7 @@
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="3000"
-      data-aos-delay="1200"
+      data-aos-delay="3000"
     />
     <div
       class="row"
@@ -171,9 +171,7 @@
 // @ is an alias to /src
 import Card from "@/components/Card.vue";
 import CareCard from "@/components/CareCard.vue";
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
+
 // import Rellax from "../../node_modules/rellax/rellax.min.js";      // TODO ; get rellax working
 // var rellax = new Rellax(".rellax");
 
@@ -214,8 +212,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/global.scss";
-$aos-distance: $base * 2; // It has to be above import
-@import "node_modules/aos/src/sass/aos.scss";
+
 .row {
   // position: relative;
   display: flex;
@@ -232,45 +229,30 @@ $aos-distance: $base * 2; // It has to be above import
   }
 }
 #hi {
-  // padding-top: $sm * 3;
-  // animation: fadein 2s;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.06);
 }
 #me {
-  // transition: [property] [duration] [timing-function] [delay];
-  // animation-delay: 2s;
-  // animation: fadein 3s;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.12);
 }
 #ima {
   padding-top: $med;
   margin-bottom: $sm;
-  // padding: $med 0;
-  // animation-delay: 4s;
-  // animation: fadein 3s;
   display: inline-block;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08);
+
+  strong {
+    font-weight: 600;
+    color: white;
+    @extend %quick-ease;
+
+    &:hover {
+      color: #04444d;
+    }
+  }
 }
 
 #scroll {
   padding-bottom: $med;
-}
-.design:hover {
-  // color: $design-color;
-  color: #04444d;
-}
-.dev:hover {
-  // color: $dev-color;
-  color: #04444d;
-}
-.music:hover {
-  // color: $music-color;
-  color: #04444d;
-}
-strong {
-  font-weight: 600;
-  color: white;
-  @extend %quick-ease;
 }
 .care-container {
   display: flex;
@@ -296,41 +278,11 @@ strong {
     color: #d4d3d3;
   }
 }
-// @keyframes fadein {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
 .home {
-  // transition: [property] [duration] [timing-function] [delay];
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
   padding-top: $sm * 3;
 }
 #scroll {
   width: $sm;
   display: inline-block;
-  // animation: fadein 2s;
-  // animation-delay: 6s;
-  // animation-fill-mode: forwards;
-  // visibility: hidden;
-
-  transition: all 0.4s ease 6s;
-  -webkit-transition: all 0.4s ease 6s;
-  -moz-transition: all 0.4s ease 6s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
 }
 </style>

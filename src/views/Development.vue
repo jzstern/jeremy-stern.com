@@ -1,7 +1,5 @@
 <template>
   <div id="dev">
-    <!-- <h1>Development</h1> -->
-    <!-- <p class="floater">The more I learn, the more I realize I don't know</p> -->
     <div class="content">
       <h2>Frameworks & Languages</h2>
       <div class="frameworks">
@@ -46,6 +44,7 @@
 
 <script>
 import Framework from "../components/Framework.vue";
+
 export default {
   name: "Development",
   components: {

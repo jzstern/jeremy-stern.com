@@ -4,8 +4,6 @@
       <h2>
         <a href="https://dribbble.com/jzstern" target="_blank">Portfolio</a>
       </h2>
-      <!-- <i>I primarily use Figma, but have experience with Sketch</i> -->
-      <!-- <p>Below are a handful of projects I've worked on for hackathons, design challenges, and just for fun. Hit me up if you'd like to learn a bit more about my process!</p> -->
 
       <div id="images">
         <design-preview
@@ -14,22 +12,31 @@
           :title="item.title"
           :text="item.text"
           :slides="item.slides"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1200"
+          data-aos-delay="500"
+          data-aos-easing="ease"
         ></design-preview>
       </div>
       <br />
-      <!-- <h2>Philosophy</h2> -->
-      <!-- <i>“People ignore design that ignores people.” - Frank Chimero</i> -->
-      <i style="font-size: 20px">“People ignore design that ignores people”</i>
-      <p style="font-size: 18px">- Frank Chimero</p>
-      <!-- <p>Design is one of the most important yet overlooked foundations of digital products. No matter how much high level utility a service provides, user experience will make or break a product.</p>
-      <p>Together, we can bring ideas to their full potential. Everything starts with defining the problem. It's not just the how, but also the why.</p>
-      <p>Less is more.</p>-->
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="1200"
+        data-aos-delay="500"
+        data-aos-easing="ease"
+      >
+        <i style="font-size: 20px">“People ignore design that ignores people”</i>
+        <p style="font-size: 18px">- Frank Chimero</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import DesignPreview from "../components/DesignPreview.vue";
+
 export default {
   name: "Design",
   components: {
@@ -99,7 +106,6 @@ a {
   color: white !important;
 
   &:hover {
-    // color: $design-color !important;
     color: #04444d !important;
   }
 }

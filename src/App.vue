@@ -23,7 +23,12 @@
         </div>
       </nav>
     </div>
-    <router-view id="page-content" />
+    <router-view
+      id="page-content"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease"
+    />
     <hire-me-button></hire-me-button>
   </div>
 </template>
@@ -31,6 +36,9 @@
 <script>
 import HireMeButton from "@/components/HireMeButton.vue";
 import Contact from "@/components/Contact.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({ once: true });
 
 export default {
   name: "App",
@@ -116,27 +124,6 @@ body {
     }
   }
 }
-// nav a::after {
-//   content: "";
-//   background: $music-color;
-//   height: 2px;
-//   position: absolute;
-//   bottom: 0;
-//   transition: 0.16s all 0.025s;
-//   // margin-bottom: -2px !important;
-// }
-// nav a::after {
-//   left: 100%;
-//   right: 0;
-// }
-// nav a:hover ~ a::after {
-//   left: 0;
-//   right: 100%;
-// }
-// nav a:hover::after {
-//   left: 0;
-//   right: 0;
-// }
 #nav-wide {
   width: 500%;
   margin-left: -200%;
@@ -184,17 +171,7 @@ nav {
     &.router-link-exact-active {
       border-bottom: 4px solid $dev-color;
       color: black;
-
-      // content: "";
-      // background: $dev-color;
       height: 0px;
-      // // position: fixed;
-      // // position: absolute;
-      // position: relative;
-      // bottom: 0;
-      // transition: 0.16s all 0.025s;
-      // margin-bottom: -2px !important;
-      // margin-top: $navbar-height;
     }
 
     &:hover {
@@ -215,10 +192,6 @@ nav {
       height: 30px;
       margin: auto;
       padding-right: 12px;
-
-      &:hover {
-        // TODO ; add box shadow
-      }
     }
 
     .text {

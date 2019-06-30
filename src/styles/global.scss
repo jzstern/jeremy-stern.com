@@ -13,6 +13,9 @@ $lg: $med * 2; // 240px
 $navbar-height: 90px;
 $corner: 1px;
 
+$aos-distance: $base * 2; // It has to be above import
+@import "node_modules/aos/src/sass/aos.scss";
+
 a {
     text-decoration: none;
 }

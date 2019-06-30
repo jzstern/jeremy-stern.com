@@ -1,11 +1,21 @@
 <template>
-  <div class="wrapper">
+  <div
+    class="wrapper"
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    data-aos-duration="1200"
+    data-aos-easing="ease"
+  >
     <img src="../assets/briefcase-white.svg" />
     <h4 style="font-size: 16px; font-weight: 500; color: white;">Currently available for hire</h4>
     <div
       id="hire-me"
       class="box-shadow-transition box-shadow-below box-shadow-below-hover"
       onclick="location.href='mailto:jzstern@gmail.com';"
+      data-aos-delay="1200"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
     >
       <div id="butt">
         <p>Email me for inquires</p>
@@ -16,6 +26,10 @@
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({ once: true });
+
 export default {
   name: "HireMeButton"
 };
@@ -23,6 +37,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/global.scss";
+$aos-distance: $base * 2; // It has to be above import
+@import "node_modules/aos/src/sass/aos.scss";
 
 h4 {
   margin-bottom: $sm / 2;
