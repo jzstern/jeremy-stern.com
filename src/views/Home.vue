@@ -16,9 +16,12 @@
       </router-link>
     </p>
 
-    <br>
-    <img id="scroll" src="http://albara.org/images/6576638-0-scrolldown-black.gif?crc=4181211743">
-
+    <br />
+    <img
+      style="filter: invert(100%)"
+      id="scroll"
+      src="http://albara.org/images/6576638-0-scrolldown-black.gif?crc=4181211743"
+    />
     <div class="row">
       <Card
         type="design"
@@ -27,20 +30,20 @@
         :button="this.designButton"
       />
       <span>
-        <img src="../assets/layout.svg">
+        <img src="../assets/layout-white-shadow.svg" />
       </span>
     </div>
 
     <div class="row">
-      <span>
-        <img src="../assets/code.svg">
-      </span>
       <Card
         type="development"
         :title="this.devTitle"
         :text="this.devText"
         :button="this.devButton"
       />
+      <span>
+        <img src="../assets/code-white-shadow.svg" />
+      </span>
     </div>
 
     <div class="row">
@@ -51,32 +54,49 @@
         :button="this.musicButton"
       />
       <span>
-        <img src="../assets/headphones.svg">
+        <img src="../assets/headphones-white-shadow.svg" />
       </span>
     </div>
 
     <div class="spacer"></div>
 
     <h4>I care about</h4>
-    <br>
-    <br>
+    <br />
+    <br />
     <div class="care-container">
+      <CareCard
+        title="People"
+        text="I love hearing stories, perspectives, and interests from those who are different from me."
+        iconPath="users.svg"
+      />
+      <CareCard
+        title="Privacy"
+        text="We leave digital traces of ourselves everywhere, all the time. This data should not be available to onlookers."
+        iconPath="lock.svg"
+      />
+      <CareCard
+        title="Nature"
+        text="There’s only one earth, and it’s a pretty good one. I want to leave this planet better than I found it."
+        iconPath="sun.svg"
+      />
+    </div>
+    <!-- <div class="care-container">
       <span class="care">
-        <img src="../assets/users.svg">
+        <img src="../assets/users.svg" />
         <p class="text2">People</p>
         <p>{{ people }}</p>
       </span>
       <span class="care">
-        <img src="../assets/lock.svg">
+        <img src="../assets/lock.svg" />
         <p class="text2">Privacy</p>
         <p>{{ privacy }}</p>
       </span>
       <span class="care">
-        <img src="../assets/sun.svg">
+        <img src="../assets/sun.svg" />
         <p class="text2">Nature</p>
         <p>{{ nature }}</p>
       </span>
-    </div>
+    </div>-->
 
     <div class="spacer"></div>
 
@@ -84,36 +104,46 @@
     <div class="interests">
       <p>
         Skiing
-        <br>Photography
-        <br>Climbing
+        <br />Photography
+        <br />Climbing
       </p>
       <p>
         Reading
-        <br>Surfing
-        <br>Chess
+        <br />Surfing
+        <br />Chess
       </p>
       <p>
         Hiking
-        <br>Learning
-        <br>Foosball
+        <br />Learning
+        <br />Foosball
       </p>
       <p>
         Cooking
-        <br>Paintball
-        <br>SCUBA
+        <br />Paintball
+        <br />SCUBA
       </p>
     </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Card from "@/components/Card.vue";
+import CareCard from "@/components/CareCard.vue";
+// import Rellax from "../../node_modules/rellax/rellax.min.js";      // TODO ; get rellax working
+// var rellax = new Rellax(".rellax");
 
 export default {
   name: "home",
   components: {
-    Card
+    Card,
+    CareCard
   },
   data() {
     return {
@@ -131,7 +161,7 @@ export default {
       web3Button: "view my crypto projects",
       musicTitle: "I live for music",
       musicText:
-        "Whether it’s producing, djing, playing bass guitar, making weird noises, tinkering with hardware, mixing/mastering or even just listening... I can’t go one day without some kind of auditory stimulation.",
+        "Whether it’s producing, djing, slappin' the bass, tinkering with hardware, audio engineering or even just listening... I can’t go one day without some kind of auditory stimulation.",
       musicButton: "listen to my sounds",
       people:
         "I love hearing stories, perspectives, and interests from those who are different from me",
@@ -154,6 +184,11 @@ export default {
 
   span {
     margin: auto;
+
+    img {
+      // TODO ; export white icons in figma w/ box shadow
+      // box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+    }
   }
 }
 #hi {
@@ -178,17 +213,20 @@ export default {
   animation: fadein 10s;
 }
 .design:hover {
-  color: $design-color;
+  // color: $design-color;
+  color: #04444d;
 }
 .dev:hover {
-  color: $dev-color;
+  // color: $dev-color;
+  color: #04444d;
 }
 .music:hover {
-  color: $music-color;
+  // color: $music-color;
+  color: #04444d;
 }
 strong {
   font-weight: 600;
-  color: black;
+  color: white;
   @extend %quick-ease;
 }
 .care-container {
@@ -207,10 +245,12 @@ strong {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: $max-width - $lg;
+  margin: auto;
 
   p {
     text-align: left;
-    color: #6f6f6f;
+    color: #d4d3d3;
   }
 }
 // @keyframes fadein {

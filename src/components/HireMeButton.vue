@@ -1,16 +1,16 @@
 <template>
   <div class="wrapper">
-    <h4 style="font-size: 16px; font-weight: 600">Currently available for hire</h4>
+    <img src="../assets/briefcase-white.svg" />
+    <h4 style="font-size: 16px; font-weight: 600; color: white;">Currently available for hire</h4>
     <div
       id="hire-me"
       class="box-shadow-transition box-shadow-below box-shadow-below-hover"
       onclick="location.href='mailto:jzstern@gmail.com';"
     >
-      <span>
-        <!-- <img src="../assets/briefcase-white.svg"/> -->
-        <img src="../assets/briefcase.svg">
-      </span>
-      <p>Email me for inquires</p>
+      <div id="butt">
+        <p>Email me for inquires</p>
+        <img src="../assets/send.svg" style="filter: invert(100%); margin-left: 8px;" />
+      </div>
     </div>
   </div>
 </template>
@@ -33,11 +33,11 @@ h4 {
 }
 
 #hire-me {
-  width: 270px;
-  height: 210px;
-  // background: $music-color;
-  background: #75bac4;
-  border-radius: 12px;
+  color: white;
+  width: $lg + $base;
+  height: $sm;
+  background: #209d98;
+  border-radius: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,6 +49,18 @@ h4 {
     // -webkit-box-shadow: 6px 16px 18px -6px rgba(0, 0, 0, 0.3);
     // -moz-box-shadow: 6px 12px 18px -6px rgba(0, 0, 0, 0.3);
     // box-shadow: 6px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+
+  #butt {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 

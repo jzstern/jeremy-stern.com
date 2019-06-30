@@ -9,22 +9,25 @@
       </div>
 
       <i>I also have experience with Node, MongoDB, AWS Amplify, web3, IPFS, React Native, jQuery, Bootstrap, Material, C++ and more</i>
-      <br>
-      <br>
+      <br />
+      <br />
       <h2>Loft Radio</h2>
       <p>I'm currently chugging away on a project called Loft; a 24/7 music stream that enables listeners to tip artists in small amounts of cryptocurrency. Experimenting with new ways of fostering community engagement, exchanging value between artists and listeners, and playful interactions.</p>
       <p>
         See
         <a href="https://twitter.com/jzstern" target="_blank">this Twitter thread</a> for more info and don't hesitate to reach out if you're curious!
       </p>
-      <br>
-      <br>
+      <br />
+      <br />
       <h2>Web 3 & Cryptocurrency</h2>
       <p>I'm very passionate about the decentralized web and the potential of blockchain technology. We are currently witnessing the reinvention of value exchange, network protocol design, and so much more! Cryptocurrency and Web 3 has the power to disrupt every industry, and I can’t wait to see what the future holds for distributed computing.</p>
-      <br>
-      <br>
+      <br />
+      <br />
+      <br />
       <p>More coming soon...</p>
-      <br>
+      <br />
+      <br />
+      <br />
       <p>
         In the meantime, feel free to check out my
         <a

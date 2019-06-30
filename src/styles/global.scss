@@ -5,11 +5,13 @@ $dev-color: #038194;
 $music-color: #93a693;
 $primary-color: #114B5F;
 $gray: #6f6f6f;
+$light-gray: #D4D4D4;
 $base: 15px;
 $sm: $base * 4; // 60px
 $med: $sm * 2; // 120px
 $lg: $med * 2; // 240px
 $navbar-height: 90px;
+$corner: 1px;
 
 a {
     text-decoration: none;

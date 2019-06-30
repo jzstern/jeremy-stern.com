@@ -11,9 +11,9 @@
           </div>
           <div class="big-wrapper" @mouseover="hover = true" @mouseleave="hover = false">
             <div class="profile">
-              <img class="pic" src="https://i.imgur.com/L9rLNo7.png">
+              <img class="pic" src="https://i.imgur.com/L9rLNo7.png" />
               <div class="text">Jeremy Stern</div>
-              <img id="chevron" src="./assets/chevron-down.svg">
+              <img id="chevron" src="./assets/chevron-down.svg" />
             </div>
             <transition name="slide-fade">
               <!-- <contact v-if="true"></contact> -->
@@ -23,7 +23,7 @@
         </div>
       </nav>
     </div>
-    <router-view id="page-content"/>
+    <router-view id="page-content" />
     <hire-me-button></hire-me-button>
   </div>
 </template>
@@ -66,6 +66,27 @@ export default {
   opacity: 0;
 }
 
+body {
+  // background: linear-gradient(
+  //   158.73deg,
+  //   #038194 0%,
+  //   #26a699 26.04%,
+  //   #038194 26.05%,
+  //   #03343b 64.06%,
+  //   rgba(3, 129, 148, 1) 64.06%
+  // );
+  background: linear-gradient(
+    158.73deg,
+    #038194 0%,
+    #26a699 26.04%,
+    #038194 26.05%,
+    #03343b 64.06%,
+    rgba(3, 129, 148, 0.359375) 64.06%,
+    #3a5c7e 64.07%,
+    rgba(58, 92, 126, 0.61) 100%
+  );
+}
+
 .active {
   background: green;
 }
@@ -74,40 +95,26 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  position: relative;
   // z-index: 0;
   // overflow: hidden;
   // overflow: visible !important;
 }
 #page-content {
   max-width: $max-width;
-  // margin: 0 $margin;
-  // margin: $med 10vw;
   margin: auto;
   margin-top: $med !important;
   margin-bottom: $med !important;
   text-align: center;
   z-index: 1;
-}
-#nav-wide {
-  width: 500%;
-  margin-left: -200%;
-  border-bottom: 2px solid rgba(196, 196, 196, 0.25);
-  z-index: 100;
-  // overflow: visible !important;
-}
-#nav-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 75vw;
-}
-.fixed-nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(10px);
+  color: white;
+
+  a {
+    color: #b0d2d9;
+    &:hover {
+      color: $design-color;
+    }
+  }
 }
 // nav a::after {
 //   content: "";
@@ -130,11 +137,34 @@ export default {
 //   left: 0;
 //   right: 0;
 // }
+#nav-wide {
+  width: 500%;
+  margin-left: -200%;
+  // border-bottom: 2px solid white; // TODO ; decide about this line
+  // border-bottom: 2px solid rgba(196, 196, 196, 0.25); // TODO ; decide about this line
+  z-index: 100;
+  // overflow: visible !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.97);
+}
 nav {
   display: inline-block;
   height: $navbar-height;
   line-height: $navbar-height;
   max-width: $max-width;
+
+  #nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75vw;
+  }
 
   .links {
     font-size: 16px;
@@ -152,19 +182,19 @@ nav {
     display: inline-block;
     color: $gray;
     &.router-link-exact-active {
-      border-bottom: 2px solid $dev-color;
+      border-bottom: 4px solid $dev-color;
       color: black;
 
       // content: "";
       // background: $dev-color;
-      // height: 2px;
+      height: 0px;
       // // position: fixed;
       // // position: absolute;
       // position: relative;
       // bottom: 0;
       // transition: 0.16s all 0.025s;
       // margin-bottom: -2px !important;
-      // margin-top: 90px;
+      // margin-top: $navbar-height;
     }
 
     &:hover {

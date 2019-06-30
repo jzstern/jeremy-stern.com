@@ -1,7 +1,7 @@
 <template>
   <div class="design">
     <div class="content">
-      <h2 id="portfolio">
+      <h2>
         <a href="https://dribbble.com/jzstern" target="_blank">Portfolio</a>
       </h2>
       <!-- <i>I primarily use Figma, but have experience with Sketch</i> -->
@@ -16,7 +16,7 @@
           :slides="item.slides"
         ></design-preview>
       </div>
-      <br>
+      <br />
       <!-- <h2>Philosophy</h2> -->
       <!-- <i>“People ignore design that ignores people.” - Frank Chimero</i> -->
       <i style="font-size: 20px">“People ignore design that ignores people”</i>
@@ -96,10 +96,11 @@ export default {
 
 a {
   @extend %quick-ease;
-  color: black;
+  color: white !important;
 
   &:hover {
-    color: $design-color;
+    // color: $design-color !important;
+    color: #04444d !important;
   }
 }
 

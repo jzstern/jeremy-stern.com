@@ -2,8 +2,8 @@
   <div class="design-preview">
     <h3>{{ title }}</h3>
     <p>{{ text }}</p>
-    <br>
-    <carousel class="pics" :data="slides" indicators="hover" autoplay="false" interval="8000"></carousel>
+    <br />
+    <carousel class="pics" :data="slides" indicators="hover" :autoplay="false"></carousel>
   </div>
 </template>
 

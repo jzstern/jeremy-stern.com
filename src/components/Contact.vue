@@ -67,6 +67,11 @@ export default {
           name: "LinkedIn",
           url: "https://www.linkedin.com/in/jeremy-stern-6a5a2490/",
           iconPath: "linkedin.svg"
+        },
+        {
+          name: "Soundcloud",
+          url: "https://soundcloud.com/palmingo",
+          iconPath: "soundcloud.svg"
         }
       ]
     };
@@ -82,11 +87,9 @@ export default {
   display: inline-block;
   text-align: right;
   z-index: 999999;
-  // line-height: 0px !important;
-  // line-height: 0 !important;
   line-height: 1pt !important;
   margin-top: -$base * 1.5;
-  margin-left: -$lg;
+  margin-left: -$med;
 }
 .contact {
   @extend %quick-ease;
@@ -95,11 +98,11 @@ export default {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  border-radius: 12px;
+  border-radius: $corner;
   background: white;
   box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.3);
-  width: 330px;
-  height: 210px;
+  width: $lg - $base * 2;
+  height: 230px;
 
   //   &:hover {
   //     cursor: pointer;
@@ -111,7 +114,7 @@ export default {
 }
 
 .title {
-  margin-top: 0;
+  margin-top: 1;
   text-align: left;
 }
 
@@ -119,7 +122,7 @@ export default {
   @extend %quick-ease;
   border: 1px solid #cccccc;
   box-sizing: border-box;
-  border-radius: 15px;
+  // border-radius: 15px;
   width: 88px;
   height: 32px;
   font-variant: small-caps;
