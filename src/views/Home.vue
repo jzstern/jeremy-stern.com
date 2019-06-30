@@ -194,11 +194,13 @@ export default {
 #hi {
   // padding-top: $sm * 3;
   animation: fadein 2s;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.06);
 }
 #me {
   // transition: [property] [duration] [timing-function] [delay];
   animation-delay: 2s;
   animation: fadein 3s;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.12);
 }
 #ima {
   padding-top: $med;
@@ -207,6 +209,7 @@ export default {
   animation-delay: 4s;
   animation: fadein 3s;
   display: inline-block;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08);
 }
 #scroll {
   padding-bottom: $med;

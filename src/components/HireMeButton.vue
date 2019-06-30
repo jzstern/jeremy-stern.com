@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <img src="../assets/briefcase-white.svg" />
-    <h4 style="font-size: 16px; font-weight: 600; color: white;">Currently available for hire</h4>
+    <h4 style="font-size: 16px; font-weight: 500; color: white;">Currently available for hire</h4>
     <div
       id="hire-me"
       class="box-shadow-transition box-shadow-below box-shadow-below-hover"
@@ -33,6 +33,7 @@ h4 {
 }
 
 #hire-me {
+  @extend %quick-ease;
   color: white;
   width: $lg + $base;
   height: $sm;
@@ -43,8 +44,10 @@ h4 {
   justify-content: center;
   font-size: 12px;
   margin: auto;
+  box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.3);
 
   &:hover {
+    box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     // -webkit-box-shadow: 6px 16px 18px -6px rgba(0, 0, 0, 0.3);
     // -moz-box-shadow: 6px 12px 18px -6px rgba(0, 0, 0, 0.3);
@@ -64,20 +67,20 @@ h4 {
   }
 }
 
-.box-shadow-transition {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-}
-.box-shadow-below {
-  -webkit-box-shadow: 2px 8px 12px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 8px 12px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 8px 12px -6px rgba(0, 0, 0, 0.75);
-}
-.box-shadow-below-hover:hover {
-  -webkit-box-shadow: 0 12px 18px -6px black;
-  -moz-box-shadow: 0 12px 18px -6px black;
-  box-shadow: 0 12px 18px -6px black;
-}
+// .box-shadow-transition {
+//   -webkit-transition: all 0.3s ease-in-out;
+//   -moz-transition: all 0.3s ease-in-out;
+//   -ms-transition: all 0.3s ease-in-out;
+//   -o-transition: all 0.3s ease-in-out;
+// }
+// .box-shadow-below {
+//   -webkit-box-shadow: 2px 8px 12px -6px rgba(0, 0, 0, 0.75);
+//   -moz-box-shadow: 2px 8px 12px -6px rgba(0, 0, 0, 0.75);
+//   box-shadow: 2px 8px 12px -6px rgba(0, 0, 0, 0.75);
+// }
+// .box-shadow-below-hover:hover {
+//   -webkit-box-shadow: 0 12px 18px -6px black;
+//   -moz-box-shadow: 0 12px 18px -6px black;
+//   box-shadow: 0 12px 18px -6px black;
+// }
 </style>
