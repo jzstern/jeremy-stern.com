@@ -78,11 +78,11 @@ $card-padding: $base * 2;
     font-size: 18px;
     font-variant: small-caps;
 
-    &:hover {
-      // color: $card-btn-highlight-color !important;
-      color: #04444d !important;
-      // color: $design-color !important;
-    }
+    // &:hover {
+    //   // color: $card-btn-highlight-color !important;
+    //   color: #04444d !important;
+    //   // color: $design-color !important;
+    // }
   }
 }
 </style>
