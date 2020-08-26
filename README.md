@@ -1,29 +1,9 @@
-# jeremy-stern.com
+This site badly needs an update, but if you're curious...
 
-## Project setup
-```
-npm install
-```
+https://jeremy-stern.com/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Work I'm more proud of:
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://loft.radio/
+https://pause.loft.radio/
+https://devfolio.co/submissions/bound
